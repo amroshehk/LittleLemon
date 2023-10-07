@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Little Lemon</string>
+    <string name="little_lemon">Little Lemon</string>
+    <string name="chicago">Chicago</string>
+    <string name="order">Order Take Away</string>
+    <string name="description">Image logo</string>
+    <string name="description_one">We are a family owned Mediterranean restaurant, focused on traditional recipes served with  a modern twist.</string>
+    <string name="description_one2">We are a family owned Mediterranean restaurant, focused on traditional recipes served with  a modern twist. Turkish, Italian, Indian and chinese recipes are our speciality.</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+</resources>
