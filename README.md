@@ -2,7 +2,7 @@
 Learn to Jetpack Compose
 
 # Desgin
-![LIttle-Lemon-App-all-screens](https://github.com/amroshehk/LittleLemon/assets/12536857/1e9de262-57a6-4a9f-aefa-08da4a50c877)
+<!---![LIttle-Lemon-App-all-screens](https://github.com/amroshehk/LittleLemon/assets/12536857/1e9de262-57a6-4a9f-aefa-08da4a50c877)--->
 
 # Preview
 
