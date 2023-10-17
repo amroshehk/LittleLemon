@@ -29,6 +29,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.applefish.littlelemon.ui.theme.LittleLemonColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -80,7 +81,7 @@ fun LoginScreen() {
                 else
                     Toast.makeText(context, "Invalid credentials. Please try again.", Toast.LENGTH_SHORT).show()
             },
-            colors = ButtonDefaults.buttonColors(Color(0xFF495E57)),
+            colors = ButtonDefaults.buttonColors(LittleLemonColor.green),
             shape = RoundedCornerShape(5.dp),
             modifier = Modifier.padding(10.dp)
         ) {

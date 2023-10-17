@@ -26,6 +26,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.applefish.littlelemon.ui.theme.LittleLemonColor
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -38,7 +40,7 @@ fun UpperPanel(navController: NavHostController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.Start,
         modifier = Modifier
-            .background(Color(0xFF495E57))
+            .background(LittleLemonColor.green)
             .fillMaxWidth()
             .padding(start = 12.dp, end = 12.dp, top = 16.dp, bottom = 16.dp)
     ) {
@@ -46,11 +48,12 @@ fun UpperPanel(navController: NavHostController) {
             text = stringResource(id = R.string.little_lemon),
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold,
-            color = Color(0xFFF4CE14),
+            color = LittleLemonColor.yellow,
 
             )
         Text(
             text = stringResource(id = R.string.chicago),
+            fontWeight = FontWeight.Bold,
             fontSize = 24.sp,
             color = Color.White
         )
@@ -82,13 +85,13 @@ fun UpperPanel(navController: NavHostController) {
                 navController.navigate(Menu.route)
                 Toast.makeText(context, "Order received. Thank you!", Toast.LENGTH_SHORT).show() },
             shape = RoundedCornerShape(20.dp),
-            colors = ButtonDefaults.buttonColors(Color(0xFFF4CE14))
+            colors = ButtonDefaults.buttonColors(LittleLemonColor.yellow)
         ) {
             Text(
                 text = stringResource(id = R.string.order),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF333333)
+                color = LittleLemonColor.charcoal
             )
 
 //            Text(
@@ -97,7 +100,13 @@ fun UpperPanel(navController: NavHostController) {
 //                    onLongClick = { longClicks.value += 1 }))
 
         }
-
-
     }
+}
+
+@Composable
+@Preview
+fun PreviewUpperPanel(){
+
+    val navHostController = rememberNavController()
+    UpperPanel(navController = navHostController)
 }

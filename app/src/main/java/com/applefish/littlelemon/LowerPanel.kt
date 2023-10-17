@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.applefish.littlelemon.MenuDish
 import com.applefish.littlelemon.MenuListScreen
 import com.applefish.littlelemon.R
+import com.applefish.littlelemon.ui.theme.LittleLemonColor
 
 @Composable
 fun LowerPanel() {
@@ -34,11 +35,13 @@ fun LowerPanel() {
 
 
 @Composable
+@Preview
 fun WeeklySpecial(){
     Card(colors = CardDefaults.cardColors(Color.White)) {
         Text(
             text = "Weekly Special",
             fontSize = 26.sp,
+            color =LittleLemonColor.charcoal,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(8.dp)
         )

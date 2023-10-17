@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import com.applefish.littlelemon.data.Categories
 import com.applefish.littlelemon.data.Dish
 import com.applefish.littlelemon.data.dishes
+import com.applefish.littlelemon.ui.theme.LittleLemonColor
 
 
 @Composable
@@ -66,13 +67,14 @@ fun MenuDish(dish: Dish) {
             .padding(8.dp)){
             Column {
                 Text(
+                    color=LittleLemonColor.charcoal,
                     text = dish.name,
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Text(
                     text = dish.description,
-                    color= Color.Gray,
+                    color= LittleLemonColor.green,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .padding(vertical = 5.dp)
@@ -80,7 +82,7 @@ fun MenuDish(dish: Dish) {
                 )
                 Text(
                     text = dish.price,
-                    color= Color.Gray,
+                    color= LittleLemonColor.green,
                     fontWeight = FontWeight.Bold
                 )
 
@@ -91,7 +93,7 @@ fun MenuDish(dish: Dish) {
     }
 
     Divider(modifier = Modifier.padding(start = 8.dp, end = 8.dp),
-        color = Color.LightGray,
+        color = LittleLemonColor.yellow,
         thickness = 1.dp
     )
 }
@@ -104,7 +106,7 @@ fun PrefiewCategoryButton(){
 }
 
 
-@Composable
+@Composable()
 fun CategoryButton(category: String) {
     Button(onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(containerColor= Color.LightGray),
